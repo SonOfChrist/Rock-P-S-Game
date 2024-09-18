@@ -49,7 +49,10 @@ function playGame(playerMove){
 
             document.querySelector('.js-result') . innerHTML = result;
 
-            document.querySelector('.js-moves') . innerHTML = `You ${playerMove} - ${computerMove}`;
+            document.querySelector('.js-moves') . innerHTML = `You
+                <img class="move-icon" src="Images/${playerMove}.png" alt="">
+                <img class="move-icon" src="Images/${computerMove}.png" alt="">
+                Computer`;
 
             // alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
             // Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
