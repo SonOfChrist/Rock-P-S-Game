@@ -1,4 +1,6 @@
-//Default Operators == Json.parse() and Json.stringify() 
+//Default Operators == Json.parse(), Json.stringify(), localStorage.setItem() and localStorage.getItem()
+// Objects are just References
+
 let score = JSON.parse(localStorage.getItem('score')) || { wins:0, losses:0, ties:0 };
 
 updateScoreElement();
@@ -97,9 +99,11 @@ function playGame(playerMove){
             // alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
             // Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
     }
+
     function updateScoreElement(){
         document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
     }
+    
     function pickComputerMoves(){
 
          const randomNumber = Math.random();
