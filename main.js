@@ -1,3 +1,4 @@
+//Default Operators == Json.parse() and Json.stringify() 
 let score = JSON.parse(localStorage.getItem('score')) || { wins:0, losses:0, ties:0 };
 
 updateScoreElement();
@@ -41,12 +42,12 @@ document.body.addEventListener('keydown', (event) => {
     }
 });
 
+//Inside a function we can call other function (pickComputerMoves());
 function playGame(playerMove){
     const computerMove = pickComputerMoves();
 
         let result = '';
-
-            if (playerMove === 'rock'){
+            if (playerMove === 'rock'){                                       // Nested if statements
                 if (computerMove === 'rock'){
                     result = 'Tie.';
                 }else if(computerMove === 'paper'){
@@ -81,7 +82,7 @@ function playGame(playerMove){
             } else if(result === 'Tie.'){
                 score.ties += 1;
             }
-
+// localStorage.setItem() they just work with string only
             localStorage.setItem('score', JSON.stringify(score));
 
             updateScoreElement();
@@ -104,6 +105,7 @@ function playGame(playerMove){
          const randomNumber = Math.random();
 
             let computerMove = '';
+
                 if(randomNumber >= 0 && randomNumber < 1/3){
                 computerMove = 'rock';
                 }else if(randomNumber >= 1/3 && randomNumber < 2/3){
@@ -111,6 +113,6 @@ function playGame(playerMove){
                 }else if( randomNumber >= 2/3 && randomNumber < 1){
                     computerMove = 'scissors';
                 }
-                return computerMove;
+            return computerMove;
     }
     function1();
