@@ -1,7 +1,7 @@
 # Creating a Rock-Paper-Scissor game
 ## Html-Css and JavaScript
 -Snap of what it LooksLike
-<img src="./Images/Screenshot 2024-09-18 105558.png" alt="R-P-S">
+<img src="./Images/Rock-Paper-Scissors.png" alt="R-P-S">
 
 # Rock-Paper-Scissors {Final Project}
 - You pick a Move then The Computer will Randomly pick its Move.
