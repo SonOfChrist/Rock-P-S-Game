@@ -1,20 +1,17 @@
 //Default Operators == Json.parse(), Json.stringify(), localStorage.setItem() and localStorage.getItem()
 // Objects are just References
-
 let score = JSON.parse(localStorage.getItem('score')) || { wins:0, losses:0, ties:0 };
 
 updateScoreElement();
 
 let isAutoPlaying = false
+
 let intervalId;
 
-// const autoPlay = () => {
-
-// };
-
-function autoPlay () {
+// const autoPlay = () => {};
+function autoPlay() {
     if (!isAutoPlaying){
-        intervalId =setInterval(() => {
+        intervalId = setInterval(() => {
             const playerMove = pickComputerMoves();
             playGame(playerMove);
         }, 1000);
