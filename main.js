@@ -86,9 +86,9 @@ function playGame(playerMove){
 
             updateScoreElement();
 
-            document.querySelector('.js-result') . innerHTML = result;
+            document.querySelector('.js-result'). innerText = result;
 
-            document.querySelector('.js-moves') . innerHTML = `You
+            document.querySelector('.js-moves'). innerHTML = `You
                 <img class="move-icon" src="Images/${playerMove}.png" alt="">
                 <img class="move-icon" src="Images/${computerMove}.png" alt="">
                 Computer`;
@@ -98,7 +98,7 @@ function playGame(playerMove){
     }
 
     function updateScoreElement(){
-        document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
+        document.querySelector('.js-score').innerText = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
     }
     
     function pickComputerMoves(){
