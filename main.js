@@ -82,7 +82,7 @@ function playGame(playerMove){
             } else if(result === 'Tie.'){
                 score.ties += 1;
             }
-// localStorage.setItem() they just work with string only
+// localStorage.setItem() they just work with string only after that we are updating the score on the page
             localStorage.setItem('score', JSON.stringify(score));
 
             updateScoreElement();
@@ -90,8 +90,8 @@ function playGame(playerMove){
             document.querySelector('.js-result'). innerText = result;
 
             document.querySelector('.js-moves'). innerHTML = `You
-                <img class="move-icon" src="Images/${playerMove}.png" alt="">
-                <img class="move-icon" src="Images/${computerMove}.png" alt="">
+                <img class="move-icon" src="Images/${playerMove}.png" alt="playerMove">
+                <img class="move-icon" src="Images/${computerMove}.png" alt="computerMove">
                 Computer`;
 
             // alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
