@@ -21,7 +21,7 @@ function autoPlay() {
         clearInterval(intervalId);
         isAutoPlaying = false
     }
-}
+};
 
 document.querySelector('.js-rock-button').addEventListener('click', () => {
     playGame('rock');
@@ -42,12 +42,11 @@ document.body.addEventListener('keydown', (event) => {
     }
 });
 
-//Inside a function we can call other function (pickComputerMoves());
 function playGame(playerMove){
     const computerMove = pickComputerMoves();
 
         let result = '';
-            if (playerMove === 'rock'){                                       // Nested if statements
+            if (playerMove === 'rock'){                                      
                 if (computerMove === 'rock'){
                     result = 'Tie.';
                 }else if(computerMove === 'paper'){
@@ -94,13 +93,11 @@ function playGame(playerMove){
                 <img class="move-icon" src="Images/${computerMove}.png" alt="computerMove">
                 Computer`;
 
-            // alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-            // Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
-    }
+    };
 
     function updateScoreElement(){
         document.querySelector('.js-score').innerText = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
-    }
+    };
     
     function pickComputerMoves(){
 
@@ -116,5 +113,5 @@ function playGame(playerMove){
                     computerMove = 'scissors';
                 }
             return computerMove;
-    }
+    };
     function1();
