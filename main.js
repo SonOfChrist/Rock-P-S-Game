@@ -32,11 +32,11 @@ document.querySelector('.js-scissors-button').addEventListener('click', () => {
     playGame('scissors');
 });
 document.body.addEventListener('keydown', (event) => {
-    if (event.key === 'r'){
+    if (event.key === 'r' || 'R'){
         playGame('rock');
-    } else if (event.key === 'p'){
+    } else if (event.key === 'p' || 'P'){
         playGame('paper');
-    } else if (event.key === 's'){
+    } else if (event.key === 's' || 'S'){
         playGame('scissors');
     }
 });
