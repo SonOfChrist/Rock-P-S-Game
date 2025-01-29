@@ -1,5 +1,5 @@
 //When something doesn't exist in local storage is going to give us null // we solve it by default values
-//Default Operators == Json.parse(), Json.stringify(), localStorage.setItem() and localStorage.getItem()
+//Default Operators == Json.parse(), Json.stringify(), localStorage.setItem(), localStorage.getItem() and localStorage.removeItem().
 let score = JSON.parse(localStorage.getItem('score')) || { wins:0, losses:0, ties:0 };
 
 updateScoreElement();
