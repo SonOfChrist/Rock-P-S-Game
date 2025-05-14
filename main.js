@@ -15,10 +15,14 @@ function autoPlay() {
             const playerMove = pickComputerMoves();
             playGame(playerMove);
         }, 1000);
+
+        document.querySelector('.js-auto-play-button').innerText = 'Stop Play'
         isAutoPlaying = true
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false
+
+        document.querySelector('.js-auto-play-button').innerText = 'Auto Play'
     }
 };
 
